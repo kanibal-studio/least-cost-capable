@@ -1,0 +1,8 @@
+{
+  "required_capabilities": ["python", "debugging"],
+  "models": [
+    {"id": "economy-text", "available": true, "authorized": true, "capabilities": ["python"], "capabilities_complete": true, "cost": {"metric": "API input-token cost", "unit": "USD per million input tokens", "workload": "same coding task mix", "window": "2026-10-01 to 2026-10-11", "source": "synthetic example", "as_of": "2026-10-11", "relative_rank": 1}},
+    {"id": "standard-code", "available": true, "authorized": true, "capabilities": ["python", "debugging"], "capabilities_complete": true, "cost": {"metric": "API input-token cost", "unit": "USD per million input tokens", "workload": "same coding task mix", "window": "2026-10-01 to 2026-10-11", "source": "synthetic example", "as_of": "2026-10-11", "relative_rank": 2}},
+    {"id": "unavailable-premium", "available": false, "authorized": true, "capabilities": ["python", "debugging"], "capabilities_complete": true, "cost": {"metric": "API input-token cost", "unit": "USD per million input tokens", "workload": "same coding task mix", "window": "2026-10-01 to 2026-10-11", "source": "synthetic example", "as_of": "2026-10-11", "relative_rank": 0}}
+  ]
+}
