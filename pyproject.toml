@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "least-cost-capable"
+dynamic = ["version"]
+description = "Portable Agent Skill and helper that picks the lowest declared cost rank among catalogued models with the required capabilities. No provider calls."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "ALTA VISTA360, S.L.U." }]
+keywords = [
+    "agent-skills",
+    "ai-agents",
+    "llm",
+    "model-routing",
+    "cost-optimization",
+    "claude-code",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+least-cost-capable = "least_cost_capable.select_model:main"
+
+[project.urls]
+Homepage = "https://github.com/kanibal-studio/least-cost-capable"
+Issues = "https://github.com/kanibal-studio/least-cost-capable/issues"
+PyPI = "https://pypi.org/project/least-cost-capable/"
+
+[tool.setuptools]
+packages = ["least_cost_capable"]
+package-dir = { least_cost_capable = "scripts" }
+
+[tool.setuptools.dynamic]
+version = { attr = "least_cost_capable.__version__" }
